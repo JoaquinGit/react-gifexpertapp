@@ -32,6 +32,6 @@ Este proyecto fue iniciado con [Create React App](https://github.com/facebook/cr
 
 ## Preview 📷
 
-![](/preview.jpg)
+![](/preview.JPG)
 
 
