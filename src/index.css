@@ -29,6 +29,7 @@ body {
 .input-field {
   font-size: 1.2rem;
   color: black;
+  margin-bottom: 1rem;
 }
 
 .h2-input-value {
@@ -45,7 +46,9 @@ body {
 }
 
 .div-search {
-  margin-top: 0.2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .div-search p { 
@@ -53,8 +56,11 @@ body {
   display: inline;
 }
 
+.div-select {
+  margin-right: 1rem;
+}
+
 .input-btn {
-  margin: 1rem 1rem 1rem 3rem;
   font-size: 1.2rem;
   width: 90px;
 }
@@ -81,7 +87,7 @@ select, option {
 hr {
 
   background-color: rgb(241, 238, 230);
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 0.5rem;
   border-radius: 0.1rem;
   height: 0.12rem;
@@ -110,3 +116,35 @@ hr {
   max-height: 200px;
   max-width: 100%;
 } 
+
+/***************  Media Queries  *****************/
+
+@media (max-width: 480px) {
+
+  .div-search p { 
+    font-size: 0.9rem;
+    margin-right: 0.3rem;
+  }
+
+  .input-btn {
+    font-size: 1rem;
+    width: 70px;
+  }
+
+  .h2-input-value {
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (max-width: 340px) {
+
+  select {
+    margin-top: 0.5rem;
+  }
+
+  .h2-input-value {
+    font-size: 1rem;
+  }
+}
+
