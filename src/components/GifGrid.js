@@ -8,24 +8,32 @@ export const GifGrid =  ({ category, results }) => {
 
     return (
         <>
-            <hr />
+            {
+            loading?
 
-            <h2 className="h2-input-value animate__animated animate__fadeIn"> 
-                {category === ''? '' : `Results for "${ category }":`} 
-            </h2>
+                <p className="loading animate__animated animate__flash">Loading...</p>
+            :
+                (    
+                <div> 
+                    <hr />
 
-            {loading && <p className="loading animate__animated animate__flash">Loading...</p>}
-            
-            <div className="gif-grid">
-                {
-                    images.map( image => 
-                        
-                        <GifGridItem 
-                        key = { image.id }
-                        image = { image } />
-                    )
-                }
-            </div>
+                    <h2 className="h2-input-value animate__animated animate__fadeIn"> 
+                        {category === ''? '' : `${ results } results for "${ category }":`} 
+                    </h2>
+                    
+                    <div className="gif-grid">
+                        {
+                            images.map( image => 
+                                
+                                <GifGridItem 
+                                key = { image.id }
+                                image = { image } />
+                            )
+                        }
+                    </div>
+                </div>   
+                )
+            }
 
         </>    
     )

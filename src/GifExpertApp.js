@@ -12,7 +12,7 @@ export const GifExpertApp = () => {
             
             <AddCategory setCategories= { setCategories }/>
 
-           <ol>
+           <div>
                 { 
                     categories.map( (category) => (
 
@@ -24,7 +24,7 @@ export const GifExpertApp = () => {
                     
                     ))
                 }
-           </ol>
+           </div>
         </div>
     )
 }

@@ -17,8 +17,8 @@ export const useFetchGifs = ( category, results) => {
                 setState({
                     data: imgs,
                     loading: false
-                }); 
-                
+                }) 
+                  
         })
 
     }, [ category, results ]);
